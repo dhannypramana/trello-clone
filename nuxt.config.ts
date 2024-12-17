@@ -24,5 +24,6 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "shadcn-nuxt",
     "@nuxt/content",
+    "@vueuse/nuxt",
   ],
 });
