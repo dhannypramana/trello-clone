@@ -7,5 +7,10 @@ export default defineNuxtConfig({
     typeCheck: true,
   },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
+  shadcn: {
+    prefix: "",
+    componentDir: "./components/ui",
+  },
+
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "shadcn-nuxt"],
 });
