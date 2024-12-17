@@ -7,12 +7,14 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "db": "json-server --watch db.json --port 3001"
   },
   "dependencies": {
     "@vueuse/core": "^12.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "json-server": "1.0.0-beta.3",
     "lucide-vue-next": "^0.468.0",
     "nuxt": "^3.14.1592",
     "radix-vue": "^1.9.11",
