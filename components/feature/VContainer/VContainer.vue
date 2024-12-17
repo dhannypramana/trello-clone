@@ -5,7 +5,7 @@ const props = defineProps<Props>();
 </script>
 
 <template>
-  <section :class="cn('max-w-screen-xl mx-auto', props.class)">
+  <section :class="cn('container', props.class)">
     <slot />
   </section>
 </template>
