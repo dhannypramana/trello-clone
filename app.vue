@@ -1,3 +1,8 @@
+<script lang="ts" setup>
+const { boards, getBoards } = useBoardRead();
+await getBoards();
+</script>
+
 <template>
   <section class="max-h-screen overflow-hidden">
     <VNavbar />
@@ -6,7 +11,7 @@
       <BoardMeta />
 
       <VContainer class="min-h-screen flex overflow-x-scroll space-x-4">
-        <VBoard />
+        <VBoard v-for="board in boards" :key="board.id" :title="board.title" />
       </VContainer>
     </main>
   </section>
