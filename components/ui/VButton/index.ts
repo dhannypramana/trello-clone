@@ -1,4 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority";
+import type { PrimitiveProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 
 export { default as VButton } from "./VButton.vue";
 
@@ -17,6 +19,7 @@ export const buttonVariants = cva(
           "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        unstyled: "all-[unset] w-fit !p-0",
       },
       size: {
         default: "h-9 px-4 py-2",
@@ -31,5 +34,12 @@ export const buttonVariants = cva(
     },
   }
 );
+
+export interface Props extends PrimitiveProps {
+  variant?: ButtonVariants["variant"];
+  size?: ButtonVariants["size"];
+  class?: HTMLAttributes["class"];
+  type: HTMLButtonElement["type"];
+}
 
 export type ButtonVariants = VariantProps<typeof buttonVariants>;

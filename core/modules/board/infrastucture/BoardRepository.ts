@@ -8,4 +8,13 @@ export class BoardRepository implements IBoardRepository {
   async getBoards(): Promise<IBoard[]> {
     return await $fetch<IBoard[]>(boardEndpoints.get(), { method: "GET" });
   }
+  async postBoard(board: IBoard): Promise<IBoard> {
+    return await $fetch<IBoard>(boardEndpoints.get(), {
+      method: "POST",
+      body: {
+        id: board.id,
+        title: board.title,
+      },
+    });
+  }
 }
