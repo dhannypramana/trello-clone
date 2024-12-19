@@ -12,7 +12,7 @@ function toogleComponent() {
 
 <template>
   <VCard>
-    <VInput placeholder="Enter list title ..." />
+    <VInput placeholder="Enter list title ..." :auto-focus="true" />
     <div class="flex items-center space-x-2">
       <VButton>Add list</VButton>
       <VButton variant="unstyled" @click="toogleComponent">

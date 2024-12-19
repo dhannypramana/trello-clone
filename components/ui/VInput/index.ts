@@ -7,6 +7,7 @@ export interface Props {
   modelValue?: string | number;
   class?: HTMLAttributes["class"];
   placeholder?: HTMLInputElement["placeholder"];
+  autoFocus?: HTMLInputElement["autofocus"];
 }
 
 export interface Emit {
