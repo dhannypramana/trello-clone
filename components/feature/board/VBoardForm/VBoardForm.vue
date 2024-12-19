@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { X } from "lucide-vue-next";
 import type { Emit } from ".";
+import { toast } from "vue-sonner";
 
 const { title } = useBoardField();
 const { postBoard } = useBoardCreate();
@@ -13,8 +14,15 @@ function toogleComponent() {
 }
 
 async function submitBoardForm() {
-  await postBoard(title.value);
+  const board = await postBoard(title.value);
   emit("toogle", VBoardFormTrigger);
+
+  toast(
+    `🎉 Congratulations! Your board "${board.title}" has been successfully created!`,
+    {
+      description: `You're all set to start organizing your ideas. Let's get creative!`,
+    }
+  );
 }
 </script>
 
