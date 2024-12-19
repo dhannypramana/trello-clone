@@ -39,6 +39,7 @@ export interface Props extends PrimitiveProps {
   variant?: ButtonVariants["variant"];
   size?: ButtonVariants["size"];
   class?: HTMLAttributes["class"];
+  type: HTMLButtonElement["type"];
 }
 
 export type ButtonVariants = VariantProps<typeof buttonVariants>;

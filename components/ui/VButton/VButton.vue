@@ -10,6 +10,7 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <Primitive
     :as="as"
+    :type="type"
     :as-child="asChild"
     :class="cn(buttonVariants({ variant, size }), props.class)"
   >
