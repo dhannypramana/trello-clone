@@ -12,6 +12,7 @@ function toogleComponent() {
 
 <template>
   <VButton
+    type="button"
     variant="ghost"
     class="bg-gray-300 justify-start w-1/3 lg:w-1/5 p-5"
     @click="toogleComponent"

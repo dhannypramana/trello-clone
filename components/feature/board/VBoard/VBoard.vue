@@ -14,6 +14,8 @@ defineProps<Props>();
 
     <VBoardItem />
 
-    <VButton variant="ghost" class="w-full justify-start">Add a card</VButton>
+    <VButton type="button" variant="ghost" class="w-full justify-start">
+      Add a card
+    </VButton>
   </VCard>
 </template>
