@@ -1,11 +1,11 @@
 import type { IBoard } from ".";
 
 export class Board implements IBoard {
-  id: string;
+  readonly id: string;
   title: string;
 
-  constructor({ id, title }: IBoard) {
-    this.id = id;
+  constructor({ title }: IBoard) {
+    this.id = generateUuid();
     this.title = title;
   }
 

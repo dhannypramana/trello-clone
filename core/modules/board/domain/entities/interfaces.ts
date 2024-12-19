@@ -1,4 +1,4 @@
 export interface IBoard {
-  id: string;
+  readonly id?: string;
   title: string;
 }
