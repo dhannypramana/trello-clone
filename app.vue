@@ -16,4 +16,6 @@ await getBoards();
       </VContainer>
     </main>
   </section>
+
+  <VToaster />
 </template>
